@@ -66,5 +66,8 @@ updated_doc1 = Document(
 
 vector_store.update_document(document_id='09a39dc6-3ba6-4ea7-927e-fdda591da5e4', document=updated_doc1)
 
+# delete document
+vector_store.delete(ids=['09a39dc6-3ba6-4ea7-927e-fdda591da5e4'])
 
-
+#view document
+vector_store.get(inclue=['embeddings', 'documents', 'metadatas'])
