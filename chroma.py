@@ -34,4 +34,14 @@ vector_store = Chroma(
     collection_name='sample'
 )
 
+#add documents
+vector_store.add_documents(docs)
 
+#view documents
+vector_store.get(include=['embeddings', 'documents', 'metadatas'])
+
+#search documents
+vector_store.similarity_search(
+    query='Who among these are a bowler?',
+    k=2
+)
